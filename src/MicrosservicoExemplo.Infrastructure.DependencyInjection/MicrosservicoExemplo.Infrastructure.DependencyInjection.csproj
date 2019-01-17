@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\MicrosservicoExemplo.Infrastructure.Web\MicrosservicoExemplo.Infrastructure.Bootstrap.csproj" />
+    <ProjectReference Include="..\MicrosservicoExemplo.Application\MicrosservicoExemplo.Application.csproj" />
+    <ProjectReference Include="..\MicrosservicoExemplo.Domain\MicrosservicoExemplo.Domain.csproj" />
+    <ProjectReference Include="..\MicrosservicoExemplo.Infrastructure\MicrosservicoExemplo.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
