@@ -2,12 +2,11 @@
 using MicrosservicoExemplo.Application;
 using MicrosservicoExemplo.Application.UseCases.Contas;
 using MicrosservicoExemplo.Domain.Contas.Repositorios;
-using MicrosservicoExemplo.Domain.Contas.Servicos;
 using MicrosservicoExemplo.Infrastructure.Data;
 
-namespace MicrosservicoExemplo.Infrastructure.DependencyInjection.Modules
+namespace MicrosservicoExemplo.Infrastructure.Bootstrap.Extensions.ServiceCollection
 {
-    public static class ContasModule
+    public static class ContasServiceCollectionExtensions
     {
         public static void AddContas(this IServiceCollection services)
         {
