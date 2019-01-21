@@ -18,13 +18,16 @@ namespace MicrosservicoExemplo.Infrastructure.Bootstrap
                 options.Filters.Add<NotificationHandlerFilter>();
             });
 
+            services.AddMicrosservicoExemploHealthChecks();
             services.AddMicrosservicoExemploSwagger();
             services.AddMetrics();
         }
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseMicrosservicoExemploSwagger();
+            app.UseMicrosservicoExemploHealthChecks();
             app.UseMvc();
+
         }
     }
 }
