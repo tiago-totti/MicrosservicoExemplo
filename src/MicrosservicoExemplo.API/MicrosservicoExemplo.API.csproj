@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="App.Metrics" Version="3.0.0" />
+    <PackageReference Include="App.Metrics.AspNetCore.Mvc" Version="3.0.0" />
+    <PackageReference Include="App.Metrics.Formatters.Prometheus" Version="3.0.0" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.3.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
@@ -15,8 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\MicrosservicoExemplo.Infrastructure.Web\MicrosservicoExemplo.Infrastructure.Bootstrap.csproj" />
+    <!--<ProjectReference Include="..\..\MicrosservicoExemplo.Infrastructure.Web\MicrosservicoExemplo.Infrastructure.Bootstrap.csproj" />-->
     <ProjectReference Include="..\MicrosservicoExemplo.Application\MicrosservicoExemplo.Application.csproj" />
+    <ProjectReference Include="..\MicrosservicoExemplo.Domain\MicrosservicoExemplo.Domain.csproj" />
+    <ProjectReference Include="..\MicrosservicoExemplo.Infrastructure\MicrosservicoExemplo.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
