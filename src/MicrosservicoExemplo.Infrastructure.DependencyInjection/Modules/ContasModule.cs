@@ -1,22 +1,20 @@
-﻿using Autofac;
+﻿using Microsoft.Extensions.DependencyInjection;
+using MicrosservicoExemplo.Application;
 using MicrosservicoExemplo.Application.UseCases.Contas;
 using MicrosservicoExemplo.Domain.Contas.Repositorios;
 using MicrosservicoExemplo.Domain.Contas.Servicos;
 using MicrosservicoExemplo.Infrastructure.Data;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MicrosservicoExemplo.Infrastructure.DependencyInjection.Modules
 {
-    public class ContasModule : Module
+    public static class ContasModule
     {
-        protected override void Load(ContainerBuilder builder)
+        public static void AddContas(this IServiceCollection services)
         {
-            builder.RegisterType<ContaCorrenteServico>().As<IContaCorrenteServico>().InstancePerLifetimeScope();
-            builder.RegisterType<InMemoryRepository>().As<IContaCorrenteRepositorio>().SingleInstance();
-
-            builder.RegisterType<TransferenciaUseCase>().As<ITransferenciaUseCase>().InstancePerLifetimeScope();
+            services.AddSingleton<IContaCorrenteRepositorio, InMemoryRepository>();
+            services.AddScoped<INotificationContext, NotificationContext>();
+            services.AddScoped<ITransferenciaUseCase, TransferenciaUseCase>();
+            services.AddScoped<ICadastrarContaCorrenteUseCase, CadastrarContaCorrenteUseCase>();
         }
     }
 }

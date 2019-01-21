@@ -21,6 +21,7 @@
     <!--<ProjectReference Include="..\..\MicrosservicoExemplo.Infrastructure.Web\MicrosservicoExemplo.Infrastructure.Bootstrap.csproj" />-->
     <ProjectReference Include="..\MicrosservicoExemplo.Application\MicrosservicoExemplo.Application.csproj" />
     <ProjectReference Include="..\MicrosservicoExemplo.Domain\MicrosservicoExemplo.Domain.csproj" />
+    <ProjectReference Include="..\MicrosservicoExemplo.Infrastructure.DependencyInjection\MicrosservicoExemplo.Infrastructure.Bootstrap.csproj" />
     <ProjectReference Include="..\MicrosservicoExemplo.Infrastructure\MicrosservicoExemplo.Infrastructure.csproj" />
   </ItemGroup>
 

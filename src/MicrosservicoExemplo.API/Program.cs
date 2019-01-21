@@ -22,12 +22,6 @@ namespace MicrosservicoExemplo.API
               .Build();
 
             return WebHost.CreateDefaultBuilder(args)
-                .ConfigureServices(s =>
-                {
-                    // s.AddScoped<IApplicationStartup, ApplicationStartup>();
-                    s.AddAutofac();
-                }
-                )
                 .UseMetrics(
                             options =>
                             {
