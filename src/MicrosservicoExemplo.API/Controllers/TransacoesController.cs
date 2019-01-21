@@ -18,8 +18,13 @@ namespace MicrosservicoExemplo.API.Controllers
         {
             _transferenciaUseCase = transferenciaUseCase;
         }
-
+        /// <summary>
+        /// Executa uma transação de transferência do valor informado entre as contas especificadas
+        /// </summary>
+        /// <param name="request">Dados da transferência</param>
+        /// <returns></returns>
         [Route("transferencia")]
+        [HttpPost]
         public ActionResult PostTransferencia([FromBody]TransferenciaRequest request)
         {
             _transferenciaUseCase.Executar(request);

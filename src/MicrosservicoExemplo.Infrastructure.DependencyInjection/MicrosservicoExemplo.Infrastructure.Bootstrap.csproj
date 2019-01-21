@@ -5,11 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="App.Metrics.AspNetCore.Mvc" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.HealthChecks" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="4.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\MicrosservicoExemplo.Infrastructure.Web\MicrosservicoExemplo.Infrastructure.Bootstrap.csproj" />
     <ProjectReference Include="..\MicrosservicoExemplo.Application\MicrosservicoExemplo.Application.csproj" />
     <ProjectReference Include="..\MicrosservicoExemplo.Domain\MicrosservicoExemplo.Domain.csproj" />
     <ProjectReference Include="..\MicrosservicoExemplo.Infrastructure\MicrosservicoExemplo.Infrastructure.csproj" />
